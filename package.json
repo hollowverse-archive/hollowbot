@@ -1,0 +1,38 @@
+{
+  "name": "hollowbot",
+  "version": "1.0.0",
+  "description": "Chatops for Hollowverse",
+  "main": "src/activate.ts",
+  "license": "Unlicense",
+  "scripts": {
+    "activate-dev": "nodemon --exec ts-node src/activate.ts",
+    "activate": "ts-node src/activate.ts",
+    "lint": "tslint '**/*.t{s,sx}' -e '**/node_modules/**' --fix",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "yarn lint",
+      "git add"
+    ]
+  },
+  "pre-commit": "lint-staged",
+  "commonpkg": "@hollowverse/common-config",
+  "dependencies": {
+    "@hollowverse/common-config": "hollowverse/common-config",
+    "@types/node": "^7.0.18",
+    "@types/request-promise": "^4.1.33",
+    "commonpkg": "^1.5.5",
+    "discord.js": "^11.1.0",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1"
+  },
+  "devDependencies": {
+    "husky": "^0.13.3",
+    "lint-staged": "^3.4.0",
+    "ts-node": "^3.0.3",
+    "tslint": "^5.0.0",
+    "tslint-config-standard": "^5.0.2",
+    "typescript": "^2.1.6"
+  }
+}

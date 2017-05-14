@@ -1,0 +1,6 @@
+{
+    "extends": "./node_modules/@hollowverse/common-config/tsconfig",
+    "exclude": [
+        "node_modules"
+    ]
+}
