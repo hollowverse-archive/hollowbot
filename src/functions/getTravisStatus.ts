@@ -1,7 +1,7 @@
 import {addressBook} from '../api/addressBook'
 import {getRequest} from '../api/externalCalls'
 
-export async function getTravisStatus(message: any) {
+export function getTravisStatus(message: any) {
   getRequest(addressBook.travisBuild)
     .then((res) => {
       if (res.last_build_status === 0) {

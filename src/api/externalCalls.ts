@@ -1,5 +1,5 @@
 import * as rp from 'request-promise'
 
-export async function getRequest(address: any) {
-  return await rp(address)
+export function getRequest(address: rp.Options) {
+  return rp(address)
 }

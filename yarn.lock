@@ -185,7 +185,7 @@ commander@^2.9.0:
   dependencies:
     graceful-readlink ">= 1.0.0"
 
-commonpkg@^1.0.77:
+commonpkg@^1.5.5:
   version "1.5.5"
   resolved "https://registry.yarnpkg.com/commonpkg/-/commonpkg-1.5.5.tgz#857834212bf63b09f79bcdd55726437dde554c93"
   dependencies:
