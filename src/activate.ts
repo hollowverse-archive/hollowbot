@@ -16,7 +16,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-  if (message.content === 'good robot') {
+  if (message.content === '!ping') {
     message.reply(':ping_pong: pong!')
   }
 })
