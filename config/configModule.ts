@@ -1,6 +1,7 @@
-let env = process.env.NODE_ENV || 'development'
-let localConfig: any
+const env = process.env.NODE_ENV || 'development'
+let localConfig
 
+/*
 try {
   localConfig = require('./config.json')
 } catch (e) {
@@ -15,3 +16,4 @@ if (env === 'development' || env === 'test' && localConfig) {
     process.env[key] = envConfig[key]
   })
 }
+*/

@@ -5,10 +5,11 @@
   "main": "src/activate.ts",
   "license": "Unlicense",
   "scripts": {
-    "activate-dev": "nodemon --exec ts-node src/activate.ts",
-    "activate": "ts-node src/activate.ts",
-    "lint": "tslint '**/*.t{s,sx}' -e '**/node_modules/**' --fix",
-    "precommit": "lint-staged"
+    "bot/dev": "nodemon --exec ts-node src/activate.ts",
+    "bot/prod": "ts-node src/activate.ts",
+    "lint": "tslint '**/*.t{s,sx}' -e '**/node_modules/**' --fix --project ./tsconfig.json --type-check",
+    "precommit": "lint-staged",
+    "test": "yarn lint && yarn bot/prod"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
