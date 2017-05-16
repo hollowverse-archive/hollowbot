@@ -1,5 +1,9 @@
 import * as rp from 'request-promise'
 
 export function getRequest(address: rp.Options) {
-  return rp(address)
+  try {
+    return rp(address)
+  } catch (error) {
+    throw error
+  }
 }
