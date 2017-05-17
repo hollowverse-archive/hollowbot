@@ -1,4 +1,4 @@
-import {DISCORD_KEY} from '../config/config'
+import {discordKey} from '../config/config'
 import * as Discord from 'discord.js'
 import {getTravisStatus} from './functions/getTravisStatus'
 import {getAllCommands} from './functions/getAllCommands'
@@ -27,4 +27,5 @@ client.on('message', message => {
   }
 })
 
-client.login(DISCORD_KEY)
+console.log(discordKey)
+client.login(discordKey)

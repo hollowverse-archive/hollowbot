@@ -8,8 +8,9 @@ try {
   configFile = fs.readFileSync('./config/hollowbot.config.json', 'utf8')
   localConfig = JSON.parse(configFile)
 } catch (error) {
-  // Project doesn't have a local config, we'll look for an environmental variable set via the Deployment medium
-  console.log('Local config is not available! -- Relying on environmental variables on the container.')
+  // Project doesn't have a local config, we'll look for an environment variable set via the deployment medium
+  console.log('Local config is not available! -- Relying on environment variables.')
+  localConfig = false
 }
 
-export const DISCORD_KEY: string = process.env.DISCORD_KEY || localConfig.DISCORD_KEY
+export const discordKey: string = process.env.discordKey || localConfig.discordKey
