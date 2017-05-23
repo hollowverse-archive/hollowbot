@@ -1,7 +1,7 @@
 {
   "extends": "@hollowverse/common-config/tslint.json",
   "rules": {
-    "await-promise": false,
-    "no-floating-promises": false
+    "no-console": [false],
+    "arrow-parens": false
   }
 }
