@@ -2,6 +2,9 @@
   "extends": "@hollowverse/common-config/tslint.json",
   "rules": {
     "no-console": [false],
-    "arrow-parens": false
+    "arrow-parens": false,
+    "max-line-length": [
+      false
+    ]
   }
 }
