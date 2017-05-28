@@ -3,8 +3,6 @@
   "rules": {
     "no-console": [false],
     "arrow-parens": false,
-    "max-line-length": [
-      false
-    ]
+    "max-line-length": [false]
   }
 }

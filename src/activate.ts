@@ -1,7 +1,8 @@
 import * as Discord from 'discord.js'
 import {discordKey} from '../config/config'
-import {getServerStatus} from './functions/monitoring/passive/getServerStatus'
-import {getTravisStatus} from './functions/monitoring/passive/getTravisStatus'
+import {getServerStatus} from './functions/monitoring/onDemand/getServerStatus'
+import {getTravisStatus} from './functions/monitoring/onDemand/getTravisStatus'
+import {returnPingPong} from './functions/trivia/pingPong'
 import {getAllCommands} from './functions/utility/getAllCommands'
 
 const client = new Discord.Client()
@@ -25,7 +26,7 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
-  if (message.content === '!ping') message.reply(':ping_pong: pong!')
+  if (message.content === '!ping') returnPingPong(message)
 })
 
 client.on('message', message => {
