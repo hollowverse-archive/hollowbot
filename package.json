@@ -7,7 +7,7 @@
     "compile": "tsc",
     "clean": "rm scripts/*.js",
     "prestart": "npm run compile",
-    "start": "hubot --adapter discord --name hollowbot"
+    "start": "hubot --adapter discord --name demobot"
   },
   "dependencies": {
     "@types/chance": "^0.7.33",
