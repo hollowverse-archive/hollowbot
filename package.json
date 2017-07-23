@@ -7,7 +7,7 @@
     "compile": "./node_modules/.bin/tsc",
     "clean": "rm scripts/*.js",
     "prestart": "yarn compile",
-    "start": "hubot --adapter disbot --name @demobot"
+    "start": "hubot --adapter disbot --name @demobot#6406"
   },
   "dependencies": {
     "@types/chance": "^0.7.33",
