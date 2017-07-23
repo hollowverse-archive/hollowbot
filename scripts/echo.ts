@@ -4,7 +4,7 @@ import * as Chance from 'chance';
 const chance = new Chance();
 
 module.exports = (robot: hubot.Robot) => {
-  robot.hear(/echo (.+)$/, res => {
+  robot.respond(/echo (.+)$/, res => {
     res.reply(res.match[1]);
   });
 
