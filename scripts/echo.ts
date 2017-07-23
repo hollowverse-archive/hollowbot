@@ -9,6 +9,6 @@ module.exports = (robot: hubot.Robot) => {
   });
 
   robot.respond(/flip a coin/, res => {
-    res.reply(chance.pickone(['head', 'tails']));
+    res.reply(chance.pickone(['heads', 'tails']));
   });
 };
