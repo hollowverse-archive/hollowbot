@@ -4,9 +4,9 @@
   "private": true,
   "description": "A simple helpful robot for Hollowverse",
   "scripts": {
-    "compile": "tsc",
+    "compile": "./node_modules/.bin/tsc",
     "clean": "rm scripts/*.js",
-    "prestart": "npm run compile",
+    "prestart": "yarn compile",
     "start": "hubot --adapter discord --name demobot"
   },
   "dependencies": {
