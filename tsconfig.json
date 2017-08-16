@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs"
+  },
+  "compileOnSave": true,
+  "include": [
+    "scripts/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
