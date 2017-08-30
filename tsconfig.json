@@ -1,13 +1,20 @@
 {
+  "extends": "./node_modules/@hollowverse/common/tsconfig.json",
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs"
+    "module": "commonjs",
+    "target": "es2017",
+    "outDir": "scripts",
+    "lib": [
+      "es2017",
+      "esnext.asynciterable"
+    ]
   },
   "compileOnSave": true,
   "include": [
-    "scripts/*.ts"
+    "src/**/*.ts"
   ],
   "exclude": [
+    "./scripts",
     "node_modules"
   ]
 }

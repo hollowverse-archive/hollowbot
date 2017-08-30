@@ -1,6 +1,5 @@
 [
   "hubot-help",
   "hubot-rules",
-  "hubot-shipit",
-  "hubot-heroku-keepalive"
+  "hubot-shipit"
 ]
