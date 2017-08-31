@@ -2,4 +2,8 @@ node_modules
 .DS_Store*
 .hubot_history
 package-lock.json
-scripts/*.js
+scripts/
+secrets/**/*
+!secrets/**/*.enc
+!secrets/**/*.d.ts
+.vscode
