@@ -10,9 +10,6 @@
     ]
   },
   "compileOnSave": true,
-  "include": [
-    "src/**/*.ts"
-  ],
   "exclude": [
     "./scripts",
     "node_modules"
