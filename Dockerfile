@@ -9,17 +9,16 @@ RUN mkdir /hollowbot /hollowbot/secrets
 # it
 WORKDIR /hollowbot
 
+# Install production dependencies
+COPY package.json yarn.lock ./
+RUN yarn --prod
+
 # Copy runtime secrets
 COPY ./secrets/ ./secrets/
 
 # Copy envirnonment file written by deploy.js
 COPY env.json ./
 
-# Install production dependencies
-COPY package.json yarn.lock ./
-RUN yarn --prod
-
-RUN mkdir ./scripts
-COPY ./scripts ./scripts/
+COPY . ./
 
 CMD yarn start
