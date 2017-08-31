@@ -7,13 +7,11 @@
   "homepage": "https://github.com/hollowverse/hollowbot#readme",
   "license": "Unlicense",
   "scripts": {
-    "test": "run-p validate-file-names lint-js lint-ts",
+    "test": "run-p validate-file-names lint-js lint-ts check-js",
     "lint-js": "eslint '**/*.js{,x}'",
-    "lint-ts": "tslint 'src/*.ts' 'server/src/*.ts{,x}'",
-    "build": "tsc",
-    "clean": "rm -rf scripts/dist",
-    "start": "hubot --adapter discord --name @hb#5922",
-    "dev": "nodemon --watch src --ext ts --exec 'run-s build start'",
+    "lint-ts": "tslint '**/*.ts{,x}'",
+    "check-js": "tsc --noEmit",
+    "dev": "nodemon --watch . --ext js,json --exec 'run-s check-js start'",
     "validate-file-names": "validate-file-names",
     "lint-staged": "lint-staged"
   },

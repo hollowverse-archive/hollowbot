@@ -1,15 +1,6 @@
 {
   "extends": "./node_modules/@hollowverse/common/tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "scripts",
-    "lib": [
-      "es2015"
-    ]
-  },
-  "compileOnSave": true,
-  "exclude": [
-    "./scripts",
-    "node_modules"
-  ]
+    "noEmit": true
+  }
 }
