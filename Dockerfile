@@ -19,6 +19,6 @@ COPY ./secrets/ ./secrets/
 # Copy envirnonment file written by deploy.js
 COPY env.json ./
 
-COPY . ./
+COPY . .
 
 CMD yarn start
