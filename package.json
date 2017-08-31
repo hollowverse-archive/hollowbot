@@ -9,7 +9,7 @@
   "scripts": {
     "test": "run-p validate-file-names lint-js lint-ts check-js",
     "lint-js": "eslint '**/*.js{,x}'",
-    "lint-ts": "tslint '**/*.ts{,x}'",
+    "lint-ts": "tslint '**/*.ts{,x}' --exclude 'node_modules/**/*'",
     "check-js": "tsc --noEmit",
     "prestart": "node ./setEnv.js",
     "start": "hubot --adapter discord --name $BOT_NAME",
