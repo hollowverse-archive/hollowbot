@@ -1,7 +1,8 @@
 #! /usr/bin/env node
 
-const shelljs = require('shelljs');
+/* eslint import/no-extraneous-dependencies: ["error", {"devDependencies": true}] */
 const decryptSecrets = require('@hollowverse/common/helpers/decryptSecrets');
+const shelljs = require('shelljs');
 const executeCommands = require('@hollowverse/common/helpers/executeCommands');
 const retryCommand = require('@hollowverse/common/helpers/retryCommand');
 const writeEnvFile = require('@hollowverse/common/helpers/writeEnvFile');
