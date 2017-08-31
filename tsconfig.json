@@ -2,11 +2,9 @@
   "extends": "./node_modules/@hollowverse/common/tsconfig.json",
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
     "outDir": "scripts",
     "lib": [
-      "es2017",
-      "esnext.asynciterable"
+      "es2015"
     ]
   },
   "compileOnSave": true,
