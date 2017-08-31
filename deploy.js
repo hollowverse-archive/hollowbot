@@ -10,6 +10,7 @@ const writeEnvFile = require('@hollowverse/common/helpers/writeEnvFile');
 const {
   ENC_PASS_HOLLOWBOT,
   ENC_PASS_TRAVIS,
+  ENC_PASS_DISCORD,
   PROJECT,
   BRANCH,
   IS_PULL_REQUEST,
@@ -25,6 +26,10 @@ const secrets = [
   {
     password: ENC_PASS_TRAVIS,
     decryptedFilename: 'gcloud.travis.json',
+  },
+  {
+    password: ENC_PASS_DISCORD,
+    decryptedFilename: 'discord.json',
   },
 ];
 
