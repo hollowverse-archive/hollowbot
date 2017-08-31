@@ -6,3 +6,4 @@ scripts/
 secrets/**/*
 !secrets/**/*.enc
 !secrets/**/*.d.ts
+.vscode
