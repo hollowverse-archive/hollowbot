@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SECRET_FILE_PATH = path.join('./secrets/discord.json');
+const SECRET_FILE_PATH = path.join(__dirname, './secrets/discord.json');
 
 /**
  * @type {DiscordSecret}
