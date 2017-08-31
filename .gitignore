@@ -3,3 +3,5 @@ node_modules
 .hubot_history
 package-lock.json
 scripts/
+secrets/**/*
+!secrets/**/*.enc
