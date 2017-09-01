@@ -12,7 +12,7 @@
     "lint-ts": "tslint '**/*.ts{,x}' --exclude 'node_modules/**/*'",
     "check-js": "tsc --noEmit",
     "start": "node index.js",
-    "dev": "nodemon --watch . --ext js,json --exec 'run-s check-js start'",
+    "dev": "nodemon --watch . --ext js,json --exec 'run-s start'",
     "validate-file-names": "validate-file-names",
     "lint-staged": "lint-staged"
   },
@@ -33,9 +33,8 @@
     "@hollowverse/common": "https://github.com/hollowverse/common",
     "chance": "^1.0.11",
     "github": "^10.0.0",
-    "hubot": "^2.19.0",
+    "hubot": "^3.0.1",
     "hubot-discord": "^1.3.0",
-    "hubot-help": "^0.2.2",
     "shelljs": "^0.7.8"
   },
   "devDependencies": {
