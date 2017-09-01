@@ -9,10 +9,6 @@
     minimatch "^3.0.4"
     shelljs "^0.7.8"
 
-"@types/chance@^0.7.35":
-  version "0.7.35"
-  resolved "https://registry.yarnpkg.com/@types/chance/-/chance-0.7.35.tgz#e76f3441b7763476c58eb7dc32f62da3d8ea547e"
-
 "@types/glob@*":
   version "5.0.32"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-5.0.32.tgz#aec5cfe987c72f099fdb1184452986aa506d5e8f"
@@ -455,10 +451,6 @@ chalk@^2.1.0:
     ansi-styles "^3.1.0"
     escape-string-regexp "^1.0.5"
     supports-color "^4.0.0"
-
-chance@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/chance/-/chance-1.0.11.tgz#48e82f7583df356053e0ad122d4654c5066c570d"
 
 chokidar@^1.4.3:
   version "1.7.0"
