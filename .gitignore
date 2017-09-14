@@ -6,3 +6,4 @@ secrets/**/*
 !secrets/**/*.enc
 !secrets/**/*.d.ts
 .vscode
+build.zip

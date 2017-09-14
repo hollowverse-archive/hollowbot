@@ -4,6 +4,7 @@
 const decryptSecrets = require('@hollowverse/common/helpers/decryptSecrets');
 const shelljs = require('shelljs');
 const executeCommands = require('@hollowverse/common/helpers/executeCommands');
+const createZipFile = require('@hollowverse/common/helpers/createZipFile');
 
 const { ENC_PASS_DISCORD, IS_PULL_REQUEST } = shelljs.env;
 
@@ -18,7 +19,24 @@ const secrets = [
 
 async function main() {
   const buildCommands = ['yarn test'];
-  const deploymentCommands = [() => decryptSecrets(secrets, './secrets')];
+  const deploymentCommands = [
+    () => decryptSecrets(secrets, './secrets'),
+    () =>
+      createZipFile(
+        'build.zip',
+        [
+          'scripts/**/*',
+          'secrets/**/*',
+          'Dockerfile',
+          '.dockerignore',
+          'yarn.lock',
+          'package.json',
+          'index.js',
+        ],
+        ['secrets/**/*.enc'],
+      ),
+    'eb deploy --staged',
+  ];
 
   let isDeployment = false;
   if (isPullRequest === true) {
