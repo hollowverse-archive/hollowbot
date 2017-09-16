@@ -6,7 +6,7 @@ const shelljs = require('shelljs');
 const executeCommands = require('@hollowverse/common/helpers/executeCommands');
 const createZipFile = require('@hollowverse/common/helpers/createZipFile');
 
-const { ENC_PASS_DISCORD, IS_PULL_REQUEST, BRANCH } = shelljs.env;
+const { ENC_PASS_DISCORD, IS_PULL_REQUEST, BRANCH, PROJECT } = shelljs.env;
 
 const isPullRequest = IS_PULL_REQUEST !== 'false';
 
@@ -16,6 +16,8 @@ const secrets = [
     decryptedFilename: 'discord.json',
   },
 ];
+
+const ebEnvironmentName = `${PROJECT}-${BRANCH}`;
 
 async function main() {
   const buildCommands = ['yarn test'];
@@ -35,7 +37,7 @@ async function main() {
         ],
         ['secrets/**/*.enc'],
       ),
-    `eb use ${BRANCH}`,
+    `eb use ${ebEnvironmentName}`,
     'eb deploy --staged',
   ];
 
