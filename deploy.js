@@ -6,7 +6,7 @@ const shelljs = require('shelljs');
 const executeCommands = require('@hollowverse/common/helpers/executeCommands');
 const createZipFile = require('@hollowverse/common/helpers/createZipFile');
 
-const { ENC_PASS_DISCORD, IS_PULL_REQUEST } = shelljs.env;
+const { ENC_PASS_DISCORD, IS_PULL_REQUEST, BRANCH } = shelljs.env;
 
 const isPullRequest = IS_PULL_REQUEST !== 'false';
 
@@ -35,6 +35,7 @@ async function main() {
         ],
         ['secrets/**/*.enc'],
       ),
+    `eb use ${BRANCH}`,
     'eb deploy --staged',
   ];
 
@@ -45,6 +46,8 @@ async function main() {
     console.info(
       'Skipping deployment commands because some secrets are not provided',
     );
+  } else if (BRANCH !== 'master') {
+    console.info('Skipping deployment because it is not the master branch');
   } else {
     isDeployment = true;
   }
